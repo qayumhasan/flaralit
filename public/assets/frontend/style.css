@@ -1,0 +1,247 @@
+.sumo-browse-page main {
+    overflow-y: hidden;
+}
+
+.cta h5 span[data-v-463c957d] {
+    color: #81cbb3;
+}
+
+a.appsumo-link.appsumo-rating-link.ml-2 {
+    margin-bottom: 0px;
+}
+
+header .navbar-brand {
+
+    width: 130px !important;
+}
+
+.contact-section-overlay {
+    background-color: #293e40;
+}
+
+.spotlight-container {
+    background-color: #293e40;
+}
+
+.spotlight-carousel {
+    background-color: #293e40;
+}
+
+.green {
+    color: #81cbb3;
+}
+
+
+
+
+
+.gain-tab.w--current,
+.text-span-10 {
+    color: #81cbb3 !important;
+}
+
+.gain-tab:hover {
+    background-color: rgba(7, 192, 59, .05);
+    color: #81cbb3;
+}
+
+.section-2.main {
+    background-color: #293e40;
+}
+
+.bold-text-14 {
+    color: #81cbb3;
+}
+
+.text-span-4 {
+    color: #81cbb3;
+}
+
+
+
+a.link-block-2.w-inline-block img {
+    width: 140px;
+}
+
+
+.bg-primary {
+    background-color: #81cbb3 !important;
+}
+
+
+
+button.owl-next:before {
+    top: 50%;
+    right: 14px;
+    transform: rotate(45deg);
+    transform-origin: 100% 50%;
+}
+
+.flicking-arrow-next:after,
+.flicking-arrow-next:before,
+.flicking-arrow-prev:after,
+.flicking-arrow-prev:before {
+    content: "";
+    width: 14px;
+    height: 1px;
+    position: absolute;
+    background-color: hsla(0, 0%, 100%, .75);
+}
+
+button.owl-next:after {
+    top: 50%;
+    right: 14px;
+    transform: rotate(-45deg);
+    transform-origin: 100% 50%;
+}
+
+.flicking-arrow-next:after,
+.flicking-arrow-next:before,
+.flicking-arrow-prev:after,
+.flicking-arrow-prev:before {
+    content: "";
+    width: 14px;
+    height: 1px;
+    position: absolute;
+    background-color: hsla(0, 0%, 100%, .75);
+}
+
+.flicking-arrow-prev:before {
+    top: 50%;
+    left: 14px;
+    transform: rotate(-45deg);
+    transform-origin: 0 50%;
+}
+
+.flicking-arrow-next:after,
+.flicking-arrow-next:before,
+.flicking-arrow-prev:after,
+.flicking-arrow-prev:before {
+    content: "";
+    width: 12px;
+    height: 1px;
+    position: absolute;
+    background-color: hsla(0, 0%, 100%, .75);
+}
+
+.flicking-arrow-prev:after {
+    top: 50%;
+    left: 14px;
+    transform: rotate(45deg);
+    transform-origin: 0 50%;
+}
+
+.flicking-arrow-next:after,
+.flicking-arrow-next:before,
+.flicking-arrow-prev:after,
+.flicking-arrow-prev:before {
+    content: "";
+    width: 12px;
+    height: 1px;
+    position: absolute;
+    background-color: hsla(0, 0%, 100%, .75);
+}
+
+
+
+.flicking-button {
+    background: #3f5355;
+}
+
+.flicking-arrow-prev {
+    left: 10px;
+}
+
+.browse-filter[data-v-23f3f1e7] {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    text-align: left;
+}
+
+.appsumo-dropdown-inner-container {
+    position: absolute;
+    z-index: 1;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    /* width: 100%; */
+}
+
+button.frontend-dropdown-button.no-outline.button {
+    color: black;
+    background: transparent;
+    box-shadow: none;
+}
+
+button.frontend-dropdown-button.no-outline.button:hover {
+    color: black;
+    background: transparent;
+}
+
+.appsumo-dropdown-inner-container {
+    display: none;
+    box-shadow: 0px 0px 3px 0px #00000063;
+}
+
+.frontend-dropdown {
+    margin-bottom: 2px;
+    padding: 2px 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.frontend-dropdown:hover {
+    background: #c22f0f;
+    color: white;
+}
+
+.appsumo-dropdown-inner-container {
+    position: absolute;
+    z-index: 4;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    /* width: 100%; */
+}
+
+.rotated {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    /* IE 9 */
+    -moz-transform: rotate(180deg);
+    /* Firefox */
+    -webkit-transform: rotate(180deg);
+    /* Safari and Chrome */
+    -o-transform: rotate(180deg);
+    /* Opera */
+}
+
+.menu_custom {}
+
+.menu_custom li a {
+    font-size: 15px;
+    display: block;
+    padding: 30px 17px;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    text-align: left;
+    color: #272727;
+    font-weight: 700;
+    line-height: 1;
+    transition: color .2s ease-in-out;
+}
+
+.offcanvas-collapse-custom {
+    display: none;
+}
+
+.owl-item.active {
+    max-width: fit-content;
+}
+
+.rotet_arrow{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}

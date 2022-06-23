@@ -1,0 +1,17 @@
+.sumo-browse-page main {
+    margin-top: 118px!important;
+    background: white;
+}
+.navbar-nav .nav-item .dropdown-menu .dropdown-item a{
+    margin-bottom: 0px;
+    text-decoration: none;
+}
+a.navbar-brand {
+    margin-bottom: 0px;
+}
+.dropdown-item.custom_login_nav button {
+    color: #2e8ddf;
+    background: transparent;
+    padding-left: 30px;
+    margin-top: 10px;
+}

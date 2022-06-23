@@ -1,0 +1,363 @@
+.categoy_single {
+    font-weight: bold;
+    color: #282f3a !important;
+    position: relative;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.categoy_single::before {
+    position: absolute;
+    content: '\f054';
+    font-family: "Font Awesome 5 Free";
+    margin-left: -20px;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.icon_style::before {
+    transform: rotate(90deg);
+}
+
+.category_menu .cat_menu_sub {
+    display: grid;
+
+}
+
+button.mt-2.text-center.btn_add_cat {
+    background: grddn;
+    background: #57b65761;
+    border: 0;
+    color: #0a7a0a;
+    padding: 6px 25px;
+    border-radius: 7px;
+    margin-left: -20px;
+    font-size: 12px;
+}
+
+button.mt-2.text-center.btn_add_cat.d-flex i {
+    margin-top: 2px;
+    margin-right: 4px;
+    font-size: 12px;
+}
+
+.disable-select {
+    user-select: none;
+    /* supported by Chrome and Opera */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+}
+
+button.item_css {
+    border: 0;
+    background: #7345db5c;
+    color: #7345d3;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.card.card-add-category .card-footer {
+    background: transparent;
+    border-top: 0;
+    margin-top: -10px;
+}
+
+.cat_menu {
+    margin-bottom: 6px;
+}
+
+.cat_menu_sub a {
+    color: #282f46;
+    border-radius: 10px;
+    font-weight: 500;
+    background: #bfe3bf;
+    margin-bottom: 5px;
+    padding: 10px 10px;
+    transition: .4s;
+}
+
+button.delete_btn {
+    border: 0;
+    font-size: 12px;
+    color: red;
+    background: #ff00001f;
+    border-radius: 10px;
+    padding: 2px 5px;
+}
+
+button.edit_btn {
+    border: 0;
+    font-size: 12px;
+    color: #0a7a0a;
+    background: #2da32d42;
+    border-radius: 10px;
+    padding: 2px 5px;
+}
+
+#createCategoryItemModal .modal-dialog {
+    margin-top: 30px;
+}
+
+#createCategoryItemModal .form-group {
+    margin-bottom: 0.9rem;
+}
+
+button.close.modal_close_button {
+    position: absolute;
+    right: 0;
+    font-size: 30px;
+    z-index: 9999;
+    padding: 0px 7px;
+    border-radius: 50px;
+}
+
+#createCategoryItemModal .modal-dialog .modal-content .modal-body {
+    padding: 35px 26px;
+    padding-bottom: 10px;
+}
+
+.cat_menu_sub {
+    background: #bfe3bf54;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 4px #66666647;
+    margin: 7px 0px 15px 0px;
+}
+
+.cat_menu_sub a:hover {
+    background: #aed9ae;
+}
+
+.category_item_image img {
+    box-shadow: 0px 0px 3px #66666636;
+    border-radius: 10px;
+}
+
+span.price {
+    font-weight: 500;
+}
+
+a.add_modifier_btn {
+    background: #0dcaf040;
+    padding: 5px 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    color: #0999b7;
+    text-decoration: none;
+    transition: .4s;
+    ;
+}
+
+a.add_modifier_btn:hover {
+    background: #85dfd8;
+}
+
+.category_item_area .card_modified {
+    box-shadow: 0px 0px 3px #66666636;
+}
+
+.catgory_items {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    background: #bfe3bf7a;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 20px 20px;
+}
+
+#createModifierModal .table th,
+.jsgrid .jsgrid-table th,
+.table td,
+.jsgrid .jsgrid-table td {
+    padding: 1.125rem 1.375rem;
+    vertical-align: top;
+    border-top: 1px solid #CED4DA;
+    padding-bottom: 0px;
+}
+
+#createModifierModal button.btn.btn-sm.btn-danger {
+    margin-top: 9px;
+}
+
+.menu_hour_new .table th,
+.jsgrid .jsgrid-table th,
+.table td,
+.jsgrid .jsgrid-table td {
+    padding-bottom: 15px;
+}
+
+.menu_hour_new button.btn.btn-sm.btn-danger {
+    margin-top: 10px;
+}
+
+.login_page .content-wrapper {
+    background: linear-gradient(0deg, rgba(240, 171, 104, 1) 0%, rgba(249, 217, 192, 0.7455181901862307) 100%) !important;
+}
+
+.btn-insta-one {
+    border-radius: 5px;
+    border: 1px solid white;
+    box-shadow: 1px 2px 2px 1px white;
+    background-color: #E9880C;
+    box-shadow: 0px 0px 4px #888888cf;
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding: 10px 25px;
+}
+
+.login_logo {
+    font-family: 'Lobster', cursive;
+    color: #E9880C;
+}
+
+a.already_regis {
+    color: #ffc100;
+    text-decoration: none;
+    margin-top: 11px;
+}
+
+a.already_regis:hover {
+    color: #ca9b0c;
+
+}
+
+button.btn.btn-sm.btn-danger.mc_time_del {
+    margin-top: 38px;
+    margin-left: 10px;
+}
+
+.accordion_custom_head {
+    background-color: #4b49ac4a;
+}
+
+.accordion_custom_head button.btn.btn-link {
+    text-decoration: none;
+}
+
+.accotdion_custom_body {
+    background: linear-gradient(182deg, transparent, #1322891f);
+}
+
+.item_name {
+    background: #007bff33;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 3px #66666657;
+}
+
+.modifiers-single {
+    background: #80808052;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px #adb7c378;
+}
+
+.modifiers-single .title {
+    font-weight: 600;
+}
+
+span.value {
+    float: right;
+}
+
+span.value {
+    float: right;
+    color: #0d4c93;
+    font-weight: bold;
+}
+
+.model_for_order .modal-body {
+
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.modifiers>.title {
+    color: #951010;
+    font-weight: bold;
+}
+
+.dropdown-item:hover {
+    cursor: pointer !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    cursor: pointer !important;
+}
+
+.dropdown-menu.show {
+    display: block;
+    cursor: pointer;
+}
+
+.delivery_address {
+    padding: 20px;
+    background: #4B49AC;
+    border-radius: 10px;
+    box-shadow: 10px 10px #000;
+    color: white;
+    display: inline-block;
+}
+
+.delivery_address .value {
+    color: white;
+}
+
+.delivery_address span.value {
+    float: right;
+    color: #000;
+    padding: 0px 10px;
+    border-radius: 5px;
+    font-weight: lighter;
+    background: white;
+}
+
+.delivery_address>div {
+    margin-bottom: 5px;
+}
+
+.form-check.agree_check {
+    margin-left: 23px;
+}
+
+.form-check .form-check-label {
+    min-height: 18px;
+    display: block;
+    margin-left: 0.75rem;
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    font-size: 15px;
+    margin-left: 25px;
+}
+
+.config_dash_page .form-check .form-check-label {
+    min-height: 18px;
+    display: block;
+    margin-left: 0.75rem;
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-left: 8px;
+}
+
+.agree_area_top {
+    background: #cdcdcd;
+    padding: 1px 20px;
+    border-radius: 5px;
+    color: black;
+}
+
+.clear {
+    clear: both;
+}
+

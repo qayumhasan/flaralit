@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2915 1325 70 70">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #ffbc00;
+        stroke-width: 4px;
+      }
+
+      .cls-2 {
+        fill: #ffbc00;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_922" data-name="Group 922" transform="translate(1990 11)">
+    <g id="Group_912" data-name="Group 912" transform="translate(0 57)">
+      <g id="Ellipse_142" data-name="Ellipse 142" class="cls-1" transform="translate(925 1257)">
+        <circle class="cls-3" cx="35" cy="35" r="35"/>
+        <circle class="cls-4" cx="35" cy="35" r="33"/>
+      </g>
+    </g>
+    <g id="Group_920" data-name="Group 920" transform="translate(940.044 1334)">
+      <path id="Path_933" data-name="Path 933" class="cls-2" d="M34.562,36.311,4.881,39.574a2.393,2.393,0,0,1-1.79-3.979C8.541,29.388,19.921,15.9,30.464,15.9a11.508,11.508,0,0,1,6.167,1.79c6.525,4.1,4.5,11.459,2.626,15.557A5.224,5.224,0,0,1,34.562,36.311Z" transform="translate(-1.526 -9.574)"/>
+      <path id="Path_934" data-name="Path 934" class="cls-2" d="M28.9,3.143h0C17.679,3.143,6.578,15.438.331,22.56A2.353,2.353,0,0,1,.57,19.695C6.021,13.488,17.4,0,27.944,0a11.508,11.508,0,0,1,6.167,1.79,9.479,9.479,0,0,1,3.82,4.416,11.267,11.267,0,0,0-1.114-.8A14.859,14.859,0,0,0,28.9,3.143" transform="translate(0)"/>
+    </g>
+  </g>
+</svg>
