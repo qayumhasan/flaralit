@@ -1,7 +1,76 @@
 <div class="row">
     <div class="col-md-6">
 <div class="cart-form" id="cart-items">
+
+    @if(session()->has('membership_cart'))
     <div class="card checkout-card dark">
+        <div class="card-header">
+            <h2 class="h3">Subscriptions</h2>
+        </div>
+        <!-- End Card Header -->
+        <div class="card-body">
+
+            <!-- Desktop Table -->
+            <div class="d-lg-block" id="cart_table">
+                @php
+                $cart = session()->get('cart');
+                @endphp
+                @if($cart)
+                <table class="table sumo-purchases-table">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col"><span>Product</span></th>
+                            
+                            <th scope="col" class="text-center"><span>Price</span></th>
+                            <th scope="col" class=""></th>
+                            <th scope="col" class=""></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($cart as $key=>$product)
+                       
+                        @if(isset($product['membershipItem']))
+                        <tr class="cart_item" data-item-id="141707" data-plan-id="153215">
+                            <td class="sumo-td-img">
+                                <img class="rounded-border" src="{{ static_asset($product['photo']) }}" width="50"
+                                    height="auto">
+                            </td>
+                            <td class="sumo-td-name">
+                                <a class="sumo-title" href="#" target="_blank">
+                                    <b>{{ $product['name'] }}</b></a>
+                            </td>
+                            
+                            <td class="sumo-td-price text-center">
+                                <span class="cart-text">${{ number_format($product['price'], 2) }}</span>
+                            </td>
+
+                            <td class="sumo-td-chips sumo-chips">
+
+                            </td>
+
+                            <td class="sumo-td-remove sumo-remove">
+                                <button style="display:inline-flex;border:none!important"
+                                    onclick="delete_cart_item('{{ $key }}')"><img class="trash-icon"
+                                        src="https://appsumo2-cdn.appsumo.com/static/images/svg/trash-outline.svg" />
+                                </button>
+                            </td>
+                        </tr>
+                        @endif
+                        @endforeach
+
+                    </tbody>
+                </table>
+                @else
+                Your cart is empty!
+                @endif
+            </div>
+            <!-- Close Desktop Table -->
+        </div>
+    </div>
+    @endif
+
+    <div class="card checkout-card dark mt-4">
         <div class="card-header">
             <h2 class="h3">Deals</h2>
         </div>
@@ -11,6 +80,7 @@
             <!-- Desktop Table -->
             <div class="d-lg-block" id="cart_table">
                 @php
+                $membershipCart = Session::get('membershipCart');
                 $cart = session()->get('cart');
                 $total = 0;
                 $subtotal = 0;
@@ -35,7 +105,9 @@
                         $single = $product['price'] * $product['quantity'];
                         $subtotal += $single;
                         @endphp
-                        <tr class="cart_item" data-item-id="141707" data-plan-id="153215">
+
+                        
+                        <tr class="cart_item {{isset($product['membershipItem']) ? 'd-none':'' }}" data-item-id="141707" data-plan-id="153215">
                             <td class="sumo-td-img">
                                 <img class="rounded-border" src="{{ static_asset($product['photo']) }}" width="50"
                                     height="auto">

@@ -420,32 +420,44 @@ class FrontController extends Controller
             }
 
             $cart = session()->get('cart');
-
+            
             // if cart is empty then this the first product
             if (!$cart) {
-
-                
                 $cart = [
-                    $product->id => [
-                        "product_id"      => $product->membership_id,
+                    $product->membership_id => [
+                        "product_id"=> $product->membership_id,
                         "name"      => $product->title,
                         "quantity"  => 1,
                         "price"     => ($product->price == null) ? 0 : $product->price,
                         "photo"     => ' /sf',
+                        "membershipItem"=>true,
                     ]
                 ];
+
                 session()->put('cart', $cart);
+
+                $membershipCard =[
+                    "product_id"=> $product->membership_id,
+                    "name"      => $product->title,
+                    "quantity"  => 1,
+                    "price"     => ($product->price == null) ? 0 : $product->price,
+                    'discount' => $product->discount,
+                    "photo"     => ' /sf',
+                    
+                ];
+                
+                session()->put('membership_cart', $membershipCard);
 
                 toastr()->success(' Membership Plan added successfully');
 
-                return redirect()->route('cart');
+                return redirect()->route('checkout');
             }
 
                     
 
             
-            if (isset($cart[$product->membership_id])) {
-                unset($cart[$product->membership_id]);
+            if (isset($cart[$product->product_id])) {
+                unset($cart[$product->product_id]);
             }
             
             $cart[$product->membership_id] = [
@@ -454,13 +466,26 @@ class FrontController extends Controller
                 "quantity"  => 1,
                 "price"     => ($product->price == null) ? 0 : $product->price,
                 "photo"     => '/dddd',
+                "membershipItem"=>true,
             ];
 
             session()->put('cart', $cart);
 
+            
+                $membershipCard =[
+                    "product_id"=> $product->membership_id,
+                    "name"      => $product->title,
+                    "quantity"  => 1,
+                    "price"     => ($product->price == null) ? 0 : $product->price,
+                    'discount' => $product->discount,
+                    "photo"     => ' /sf',
+                ];
+                
+                session()->put('membership_cart', $membershipCard);
+
             toastr()->success(' Membership Plan added successfully');
 
-            return redirect()->route('cart');
+            return redirect()->route('checkout');
         } catch (Exception $exception) {
             Log::error($exception->getMessage());
             toastr()->error('Sorry! Something went wrong');

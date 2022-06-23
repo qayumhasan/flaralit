@@ -424,3 +424,35 @@ if (!function_exists('cart_quantity_count')) {
         }
     }
 }
+
+
+
+if (!function_exists('is_have_membership_plan')) {
+    
+    function is_have_membership_plan()
+    {
+        $membership_cart =session()->get('membership_cart');
+        if(session()->has('membership_cart')){
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+
+if (!function_exists('membership_cart_discount')) {
+    
+    function membership_cart_discount($total)
+    {
+        $membership_cart =session()->get('membership_cart');
+        if(session()->has('membership_cart')){
+            $discount = ($total * $membership_cart['discount'])/100;
+            return $discount;
+        } else {
+            return 0;
+        }
+    }
+}
+
+

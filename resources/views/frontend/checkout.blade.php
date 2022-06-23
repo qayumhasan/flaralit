@@ -386,18 +386,29 @@
                                             <!-- Table -->
                                             <table class="table sumo-purchases-table">
                                                 <tbody>
+
+
                                                     @php
                                                         $total = 0;
                                                         $subtotal = 0;
-                                                 
-                                                        
+                                                        $productPrice = 0;
                                                     @endphp
+
+
+
                                                     @foreach ($carts as $item)
+
                                                     @php
-                                                    // dd($item);
+                                                    
                                                     $subtotal = $item['price'] * $item['quantity'];
                                                     $total += $subtotal;
+
+                                                    if(!isset($item['membershipItem'])){
+                                                        $price = $item['price'] * $item['quantity'];
+                                                        $productPrice += $price;
+                                                    }
                                                     @endphp
+
                                                     <tr>
                                                         <td class="sumo-td-img">
                                                             <img class="rounded-border"
@@ -427,6 +438,10 @@
                                                 <div class="as-checkout-entry">
                                                     <strong>Subtotal</strong>
                                                     <strong>${{ number_format($total, 2) }}</strong>
+                                                </div>
+                                                <div class="as-checkout-entry">
+                                                    <em>Plus discount</em>
+                                                    <em>- ${{membership_cart_discount($productPrice)}}</em>
                                                 </div>
                                                 <form
                                                     class="md-form sumo-discount-form pb-4 sumo-border-b apply-coupon">
@@ -462,10 +477,12 @@
                                                     </div>
                                                 </form>
 
+                                                
+                                                
                                                 <div class="as-checkout-entry" id="checkout-total" data-total="99.00">
                                                     <strong class="as-checkout-total">Total</strong>
                                                     <strong class="as-checkout-total-price"
-                                                        id="totalprice_sidebar totalprice_mobile">${{ number_format($total, 2) }}</strong>
+                                                        id="totalprice_sidebar totalprice_mobile">${{$total -  membership_cart_discount($productPrice) }}</strong>
                                                 </div>
                                                 <div class="paypal_checkouts mt-4 hide">
                                                     
