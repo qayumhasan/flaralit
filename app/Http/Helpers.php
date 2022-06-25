@@ -1,10 +1,12 @@
 <?php
 
+use App\Models\MembershipPlan;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
 use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
 
 if (!function_exists('static_asset')) {
     /**
@@ -445,11 +447,18 @@ if (!function_exists('membership_cart_discount')) {
     
     function membership_cart_discount($total)
     {
+        
         $membership_cart =session()->get('membership_cart');
         if(session()->has('membership_cart')){
             $discount = ($total * $membership_cart['discount'])/100;
             return $discount;
-        } else {
+        } else if(isset(Auth::user()->membership_plan_id)) {
+            
+            $membership_cart =Auth::user()->membership_plan;
+            
+            $discount = ($total * $membership_cart['discount'])/100;
+            return $discount;
+        }else{
             return 0;
         }
     }

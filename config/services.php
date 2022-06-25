@@ -29,6 +29,13 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    'stripe' => [
+        
+        'key' => env('STRIPE_KEY'),
+        'secret' => env('STRIPE_SECRET'),
+        'product_id' => env('STRIPE_PRODUCT_ID'),
+        
+    ],
 //    'google'   => [
 //        'client_id'     => "764275568312-6cs0m61uhvvv9l1m2he5h4ef0l7i0b7m.apps.googleusercontent.com",
 //        'client_secret' => "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",

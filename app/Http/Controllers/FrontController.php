@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rules;
 
+
+
 class FrontController extends Controller
 {
     public function home()
@@ -303,9 +305,14 @@ class FrontController extends Controller
 
     public function delete_cart_item(Request $request)
     {
+
+        $cart = session()->get('cart');
         try {
             $cart = session()->get('cart');
-
+            if($cart[$request->product_id]['membershipItem']){
+                session()->forget('membership_cart');    
+            }
+            
             if (isset($cart[$request->product_id])) {
                 unset($cart[$request->product_id]);
                 session()->put('cart', $cart);
@@ -332,7 +339,16 @@ class FrontController extends Controller
 
     public function checkout()
     {
+       
+        
+
         $carts = session()->get('cart');
+
+        
+        if(!isset($carts)){
+            toastr()->error(__("Your cart is empty"));
+            return redirect()->route('cart');
+        }
         return view('frontend.checkout', compact('carts'));
     }
 
@@ -410,10 +426,18 @@ class FrontController extends Controller
     public function membership_card_add(Request $request)
     {
         
+        if(Auth::check()){
+            $membership_cart =Auth::user()->membership_plan;
+            if($membership_cart){
+                toastr()->error('You already have a membership plan');
+                return redirect()->back();
+            }
+
+        }
 
          // return $cart = session()->forget('cart');
          try {
-            $product =MembershipPlan::first();;
+           $product =MembershipPlan::first();;
 
             if (!$product) {
                 abort(404);

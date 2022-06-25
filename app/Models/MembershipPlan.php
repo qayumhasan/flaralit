@@ -15,6 +15,7 @@ class MembershipPlan extends Model
      * @var string
      */
     protected $primaryKey = 'membership_id';
+    public $incrementing = false;
     
     protected $fillable = ['title','price','discount','cashback','membership_id'];
 

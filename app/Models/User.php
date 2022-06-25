@@ -28,6 +28,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'membership_plan_id'
     ];
     protected $primaryKey = 'user_id';
 
@@ -61,5 +62,14 @@ class User extends Authenticatable
     public function wishlist_products()
     {
         return $this->belongsToMany(Product::class, 'wishlists', 'user_id', 'product_id')->withPivot(['id']);
+    }
+
+    
+    /**
+     * Get the phone associated with the user.
+     */
+    public function membership_plan()
+    {
+        return $this->hasOne(MembershipPlan::class,'id','membership_plan_id');
     }
 }

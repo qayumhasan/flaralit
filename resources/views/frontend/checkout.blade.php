@@ -37,6 +37,9 @@
         .strip_checkouts.show{
             display: block;
         }
+        .has-error{
+            border-color: #ff0000 !important;
+        }
         button.btn.btn-primary.btn_strip.text-center {
     background: #00b1df;
     color: white;
@@ -439,10 +442,12 @@
                                                     <strong>Subtotal</strong>
                                                     <strong>${{ number_format($total, 2) }}</strong>
                                                 </div>
+                                                @if($productPrice != 0 && membership_cart_discount($productPrice) !=0)
                                                 <div class="as-checkout-entry">
                                                     <em>Plus discount</em>
-                                                    <em>- ${{membership_cart_discount($productPrice)}}</em>
+                                                    <em>- ${{number_format(membership_cart_discount($productPrice),2)}}</em>
                                                 </div>
+                                                @endif
                                                 <form
                                                     class="md-form sumo-discount-form pb-4 sumo-border-b apply-coupon">
                                                     <div class="apply-code mt-30" id="applyCodeContainer_mobile">
@@ -482,7 +487,7 @@
                                                 <div class="as-checkout-entry" id="checkout-total" data-total="99.00">
                                                     <strong class="as-checkout-total">Total</strong>
                                                     <strong class="as-checkout-total-price"
-                                                        id="totalprice_sidebar totalprice_mobile">${{$total -  membership_cart_discount($productPrice) }}</strong>
+                                                        id="totalprice_sidebar totalprice_mobile">${{number_format($total -  membership_cart_discount($productPrice),2) }}</strong>
                                                 </div>
                                                 <div class="paypal_checkouts mt-4 hide">
                                                     
@@ -566,25 +571,41 @@
             <div class="modal-dialog" role="document" style="">
                 <div class="modal-content">
                     <!-- Form -->
-                    <form role="form" action="{{ route('stripe.payment') }}" method="POST" class="validation"
+
+                    <form role="form" action="{{ route('stripe.payment') }}" method="post" class="require-validation"
+                    data-cc-on-file="false"
+                   data-stripe-publishable-key="{{ env('STRIPE_KEY') }}"
+                   id="payment-form">
+@csrf
+                    {{-- <form role="form" action="{{ route('stripe.payment') }}" method="POST" class="validation"
                         data-cc-on-file="false" data-stripe-publishable-key="{{ env('STRIPE_KEY') }}" id="payment-form">
-                        @csrf
+                        @csrf --}}
         
                         <div class="modal-body py-30">
                             <p class="mb-20">Fill out your credit card details below.</p>
+                            
                             <div class="row">
         
         
                                 <div class="col-md-7">
+                                    <div class="alert alert-warning alert-dismissible fade show" id="error_box" role="alert">
+                                        <p class="stripe_error"></p>
+                                      </div>
         
                                     <div class='form-group required'>
                                         <label class='control-label'>Name on Card</label>
                                         <input class='form-control' size='4' type='text'>
+                                        <small class="name-error text-danger">
+                                            
+                                        </small>
                                     </div>
         
                                     <div class='form-group required'>
                                         <label class='control-label'>Card Number</label>
-                                        <input autocomplete='off' class='form-control card-num' size='20' type='text'>
+                                        <input autocomplete='off' class='form-control card-number' size='20' type='text'>
+                                        <small class="text-danger">
+                                            
+                                        </small>
                                     </div>
         
         
@@ -594,15 +615,24 @@
                                             <label class='control-label'>CVC</label>
                                             <input autocomplete='off' class='form-control card-cvc' placeholder='e.g 415'
                                                 size='4' type='text'>
+                                                <small class="text-danger">
+                                            
+                                                </small>
                                         </div>
         
                                         <div class='col-xs-12 col-md-4 form-group expiration required'>
                                             <label class='control-label'>Expiration Month</label> <input
                                                 class='form-control card-expiry-month' placeholder='MM' size='2' type='text'>
+                                                <small class="text-danger">
+                                            
+                                                </small>
                                         </div>
                                         <div class='col-xs-12 col-md-4 form-group expiration required'>
                                             <label class='control-label'>Expiration Year</label> <input
                                                 class='form-control card-expiry-year' placeholder='YYYY' size='4' type='text'>
+                                                <small class="text-danger">
+                                            
+                                                </small>
                                         </div>
         
                                     </div>
@@ -618,6 +648,54 @@
                                 </div>
                             </div>
                         </div>
+
+
+{{--                         
+                        <div class='form-row row'>
+                            <div class='col-xs-12 form-group required'>
+                                <label class='control-label'>Name on Card</label> 
+                                <input class='form-control' size='4' type='text'>
+                            </div>
+                        </div>
+  
+                        <div class='form-row row'>
+                            <div class='col-xs-12 form-group card required'>
+                                <label class='control-label'>Card Number</label> <input
+                                    autocomplete='off' class='form-control card-number' size='20'
+                                    type='text'>
+                            </div>
+                        </div>
+  
+                        <div class='form-row row'>
+                            <div class='col-xs-12 col-md-4 form-group cvc required'>
+                                <label class='control-label'>CVC</label> <input autocomplete='off'
+                                    class='form-control card-cvc' placeholder='ex. 311' size='4'
+                                    type='text'>
+                            </div>
+                            <div class='col-xs-12 col-md-4 form-group expiration required'>
+                                <label class='control-label'>Expiration Month</label> <input
+                                    class='form-control card-expiry-month' placeholder='MM' size='2'
+                                    type='text'>
+                            </div>
+                            <div class='col-xs-12 col-md-4 form-group expiration required'>
+                                <label class='control-label'>Expiration Year</label> <input
+                                    class='form-control card-expiry-year' placeholder='YYYY' size='4'
+                                    type='text'>
+                            </div>
+                        </div>
+  
+                        <div class='form-row row'>
+                            <div class='col-md-12 error form-group hide'>
+                                <div class='alert-danger alert'>Please correct the errors and try
+                                    again.</div>
+                            </div>
+                        </div>
+  
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now ($100)</button>
+                            </div>
+                        </div> --}}
         
         
         
@@ -631,8 +709,12 @@
                             <div class="col-12 d-flex flex-column flex-md-row">
                                 <button type="button" class="btn btn-cancel order-2 order-md-1 mr-md-10 ml-md-auto"
                                     data-dismiss="modal">Cancel</button>
-                                <button id="card-element-submit" type="submit"
-                                    class="btn btn-primary order-1 order-md-2 mb-10 mb-md-0">Pay Now</button>
+                                {{-- <button id="card-element-submit" type="submit"
+                                    class="btn btn-primary order-1 order-md-2 mb-10 mb-md-0">Pay Now</button> --}}
+
+                                    
+                                        <button class="btn btn-primary order-1 order-md-2 mb-10 mb-md-0" type="submit">Pay Now</button>
+                                    
                             </div>
                         </div>
                     </form>
@@ -745,10 +827,15 @@
 
     </script>
 
+
+
+
+
+
 {{-- stripe payment  --}}
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script src="https://www.paypal.com/sdk/js?client-id={{env('PAYPAL_SANDBOX_CLIENT_ID')}}"></script>
-
+{{-- 
 <script type="text/javascript">
 $(function() {
     var $form         = $(".validation");
@@ -799,7 +886,87 @@ $(function() {
         }
     }
   
+}); --}}
+{{-- </script> --}}
+
+
+<script>
+    $(function() {
+        $('#error_box').hide();
+    var $form         = $(".require-validation");
+  $('form.require-validation').bind('submit', function(e) {
+    var $form         = $(".require-validation"),
+        inputSelector = ['input[type=text]'].join(', '),
+        $inputs       = $form.find('.required').find(inputSelector),
+        $errorMessage = $form.find('div.error'),
+        valid         = true;
+        $errorMessage.addClass('hide');
+ 
+        $('.has-error').removeClass('has-error');
+    $inputs.each(function(i, el) {
+      var $input = $(el);
+      if ($input.val() === '') {
+
+        
+        // $input.next().text('This field is required')
+        // $input.siblings().find('name-error').html('This field is required');
+        $input.addClass('has-error');
+        $errorMessage.removeClass('hide');
+        e.preventDefault();
+      }
+    });
+  
+    if (!$form.data('cc-on-file')) {
+      e.preventDefault();
+      Stripe.setPublishableKey($form.data('stripe-publishable-key'));
+      Stripe.createToken({
+        number: $('.card-number').val(),
+        cvc: $('.card-cvc').val(),
+        exp_month: $('.card-expiry-month').val(),
+        exp_year: $('.card-expiry-year').val()
+      }, stripeResponseHandler);
+    }
+  
+  });
+
+  $(document).ready(function(){
+    
+    
+  });
+  
+  function stripeResponseHandler(status, response) {
+        if (response.error) {
+            $('#error_box').show();
+            console.log(response.error.message);
+            $('.stripe_error').text(response.error.message);
+            $('.error')
+                .removeClass('hide')
+                .find('.alert')
+                .text(response.error.message);
+        } else {
+            // token contains id, last4, and card type
+            var token = response['id'];
+
+   
+            // insert the token into the form so it gets submitted to the server
+            $form.find('input[type=text]').empty();
+            $form.append("<input type='hidden' name='stripeToken' value='" + token + "'/>");
+            $form.get(0).submit();
+        }
+    }
+  
 });
+</script>
+
+
+<script>
+    $(document).ready(function(){
+        $('.card-number').on('keypress change', function () {
+  $(this).val(function (index, value) {
+    return value.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
+  });
+});
+    });
 </script>
 
 </body>

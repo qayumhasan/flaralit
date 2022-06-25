@@ -12,6 +12,7 @@ use GuzzleHttp\Middleware;
 use App\Http\Controllers\SellerProductController;
 use Illuminate\Support\Facades\Artisan;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -182,6 +183,10 @@ Route::get('paypal/success', [PaymentController::class, 'paypal_success'])->name
 Route::get('paypal/error', [PaymentController::class, 'paypal_error'])->name('paypal_error');
 // route for check status of the payment
 Route::get('status', [PaymentController::class, 'getPaymentStatus'])->name('payment_status');
+
+
+Route::get('test', [PaymentController::class, 'testpayment']);
+
 
 Route::get('wishlist_products', function(){
     return redirect()->route('home');

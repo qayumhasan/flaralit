@@ -18,19 +18,29 @@ class PaymentController extends Controller
 
         $cart = session()->get('cart');
         $total = 0;
+        $product_price = 0;
         foreach ($cart as $value) {
+            if(!isset($value['membershipItem'])){
+                $product_price += $value['price'] * $value['quantity'];
+            }
             $total += $value['price'] * $value['quantity'];
         }
+
+        $discount = membership_cart_discount($product_price);
+
+        $totalPrice = $total - $discount;
 
 
 
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         $data = Stripe\Charge::create([
-            "amount" => 100 * $total,
+            "amount" => 100 * $totalPrice,
             "currency" => "usd",
             "source" => $request->stripeToken,
             "description" => "Making test payment."
         ]);
+
+        
 
         if ($data->status == 'succeeded') {
 
@@ -92,12 +102,20 @@ class PaymentController extends Controller
     {
         $cart = session()->get('cart');
         $total = 0;
+        $product_price = 0;
         foreach ($cart as $value) {
+            if(!isset($value['membershipItem'])){
+                $product_price += $value['price'] * $value['quantity'];
+            }
             $total += $value['price'] * $value['quantity'];
         }
+
+        $discount = membership_cart_discount($product_price);
+
+        $totalPrice = $total - $discount;
         try {
             $response = $this->gateway->purchase(array(
-                'amount' => $total,
+                'amount' => $totalPrice,
                 'currency'  => 'usd',
                 'returnUrl' => route('paypal_success'),
                 'cancelUrl' => route('paypal_error')
@@ -175,5 +193,17 @@ class PaymentController extends Controller
     {
         $error = 'User Decliend The Payment!';
         return view('frontend.error', compact('error'));
+    }
+
+
+    public function testpayment()
+    {
+
+        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        $customer = \Stripe\Customer::create([
+            'email' => auth()->user()->email,
+            'name'  => auth()->user()->name
+        ]);
+        return $customer;
     }
 }

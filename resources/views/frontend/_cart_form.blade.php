@@ -3,7 +3,7 @@
 <div class="cart-form" id="cart-items">
 
     @if(session()->has('membership_cart'))
-    <div class="card checkout-card dark">
+    <div class="card checkout-card dark mb-4">
         <div class="card-header">
             <h2 class="h3">Subscriptions</h2>
         </div>
@@ -11,6 +11,7 @@
         <div class="card-body">
 
             <!-- Desktop Table -->
+            {{-- membership area start from here --}}
             <div class="d-lg-block" id="cart_table">
                 @php
                 $cart = session()->get('cart');
@@ -50,11 +51,13 @@
                             </td>
 
                             <td class="sumo-td-remove sumo-remove">
-                                <button style="display:inline-flex;border:none!important"
+                                {{-- <button style="display:inline-flex;border:none!important"
                                     onclick="delete_cart_item('{{ $key }}')"><img class="trash-icon"
                                         src="https://appsumo2-cdn.appsumo.com/static/images/svg/trash-outline.svg" />
-                                </button>
+                                </button> --}}
+                                <td class="sumo-td-remove sumo-remove"><a onclick="delete_cart_item('{{ $key }}')" >Remove item</a></td>
                             </td>
+                            
                         </tr>
                         @endif
                         @endforeach
@@ -70,7 +73,9 @@
     </div>
     @endif
 
-    <div class="card checkout-card dark mt-4">
+
+     {{-- Cart area start from here --}}
+    <div class="card checkout-card dark">
         <div class="card-header">
             <h2 class="h3">Deals</h2>
         </div>
@@ -84,6 +89,7 @@
                 $cart = session()->get('cart');
                 $total = 0;
                 $subtotal = 0;
+                $productPrice = 0;
                 @endphp
                 @if($cart)
                 <table class="table sumo-purchases-table">
@@ -104,6 +110,10 @@
                         @php
                         $single = $product['price'] * $product['quantity'];
                         $subtotal += $single;
+                        if(!isset($product['membershipItem'])){
+                                                        $price = $product['price'] * $product['quantity'];
+                                                        $productPrice += $price;
+                                                    }
                         @endphp
 
                         
@@ -173,15 +183,65 @@
             <div class="mt-10 mb-20">
 
                 <div>
-                    <div class="as-checkout-entry">
-                        <strong>Subtotal</strong>
+
+                    <div>
+                        <div class="as-checkout-entry">
+                          <strong>Subtotal</strong>
+                          <strong>${{ number_format($subtotal, 2) }}</strong>
+                        </div>
+                        
+                      
+                        
+                      
+                      
+                      
+                        @if(session()->has('membership_cart'))
+                          <div class="as-checkout-entry">
+                            <em>Plus discount</em>
+                            <em> - ${{number_format(membership_cart_discount($productPrice),2) }}</em>
+                          </div>
+                          @endif
+
+                          @if(Auth::check() && isset(Auth::user()->membership_plan_id))
+                          <div class="as-checkout-entry">
+                            <em>Plus discount</em>
+                            <em> - ${{number_format(membership_cart_discount($productPrice),2) }}</em>
+                          </div>
+                          @endif
+                        
+                        
+                        
+                          
+                            
+                          
+                        
+                        
+                        <div class="as-checkout-entry" id="checkout-total" data-total="278.10">
+                          <strong class="as-checkout-total">Total</strong>
+                          <strong class="as-checkout-total-price" id="totalprice_sidebar totalprice_mobile">${{number_format($subtotal -  membership_cart_discount($productPrice),2) }}</strong>
+                        </div>
+                        
+                      </div>
+
+
+
+
+                    {{-- <div class="as-checkout-entry">
+                        <strong>Subtotal </strong>
                         <strong>${{ number_format($subtotal, 2) }}</strong>
                     </div>
                     <div class="as-checkout-entry" id="checkout-total" data-total="99.00">
-                        <strong class="as-checkout-total">Total</strong>
+                        <div class="as-checkout-entry">
+                            <em>Plus discount</em>
+                            <em>-$ 19.90</em>
+                          </div>
+                          <div class="as-checkout-entry" id="checkout-total" data-total="278.10">
+                            <strong class="as-checkout-total">Total </strong>
                         <strong class="as-checkout-total-price" id="totalprice_sidebar totalprice_mobile">$
                             {{ number_format($subtotal, 2) }}</strong>
-                    </div>
+                          </div>
+                        
+                    </div> --}}
                 </div>
             </div>
             <a id="cart-proceed-to-checkout-cta" class="btn btn-primary full-width mb-10"
