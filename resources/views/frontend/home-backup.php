@@ -21,12 +21,8 @@
 @endpush
 @push('style')
 
-
-
 @endpush
-
 @section('content')
-
 <div class="m-0 p-0" data-v-3948d8ad>
     <div class="sumo-browse-main" data-v-3948d8ad>
         <section data-v-3948d8ad>
@@ -36,39 +32,339 @@
                     <div class="wrapper spotlight-carousel" data-v-2351f2da>
                         <div class="flicking-viewport" data-v-2351f2da>
                             <div class="flicking-camera owl-carousel header_sli">
-
-
-
                                 <div class="carousel-cell">
                                     <div class="carousel-cell-inner">
-                                        <div class="swiper-slide hero-six-slide-item bg-img" data-bg-img="assets/images/slider/slider6-bg1.png">
-                            <div class="container container-six-slider h-100">
-                                <div class="row align-items-center position-relative h-100">
-                                    <div class="col-12 col-sm-6 col-lg-6">
-                                        <div class="hero-six-slide-content">
-                                            <h4 class="hero-six-slide-sub-title">Limited Offer 25% Off</h4>
-                                            <h1 class="hero-six-slide-title">The Best Saas Deals</h1>
-
-                                            <h3 class="mb-4 hero-six-slide-desc">Grandfathered For A Lifetime</h3>
-                                            <p class="hero-six-slide-desc"><span>Only</span> $199.02</p>
-                                            <a class="btn btn-border" href="shop.html">Learn More <i class="icon fa fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-lg-6">
-                                        <div class="hero-six-slide-thumb">
-                                            <img src="{{ static_asset('assets/frontend/assets/images/530x353.png') }}" width="522" height="493" alt="Image">
+                                        <div class="featured-offer-container d-flex flex-row">
+                                            <div class="spotlight-image-container">
+                                                <!---->
+                                                <a href="#" class="d-block">
+                                                    <picture class="h-100 w-100">
+                                                        <img src="{{ static_asset('assets/frontend/assets/images/530x353.png') }}"
+                                                            alt="Acumbamail" class="carousel-cell-image w-100">
+                                                    </picture>
+                                                </a>
+                                            </div>
+                                            <div class="spotlight-offer-detail">
+                                                <div><span class="bg-primary text-white
+                                       rounded d-inline-block spotlight-banner">
+                                                        Limelight
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="featured-header">
+                                                    Acumbamail
+                                                </a>
+                                                <span>
+                                                    <span>
+                                                        <span class="deal-plan-type">Lifetime deal</span>
+                                                        <!---->
+                                                    </span>
+                                                </span>
+                                                <p class="featured-sub-header">
+                                                    Create and manage email campaigns and landing pages in a
+                                                    flash.
+                                                </p>
+                                                <div browse="true" class="sumo-taco-rating featured-deal-taco-container"
+                                                    data-v-2c9a2615>
+                                                    <div class="taco-rating" data-v-2c9a2615>
+                                                        <span class="taco-rating-pct" style="width:calc(73.5% + 26px);"
+                                                            data-v-2c9a2615></span>
+                                                        <!---->
+                                                    </div>
+                                                    <span class="taco-rating-text" style="top: 3px;" data-v-2c9a2615><a
+                                                            href="##reviews" data-v-2c9a2615>
+                                                            263 Reviews
+                                                        </a></span>
+                                                </div>
+                                                <div class="deal-price w-100 spotlight-carousel-component"
+                                                    data-v-5864787e>
+                                                    <div data-v-5864787e>
+                                                        <p class="d-inline-block mr-1" data-v-5864787e>
+                                                            $79
+                                                        </p>
+                                                        <p class="original d-inline-block" data-v-5864787e>
+                                                            $839
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="buy"><a href="#">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                                <div class="carousel-cell">
+                                    <div class="carousel-cell-inner">
+                                        <div class="featured-offer-container d-flex flex-row">
+                                            <div class="spotlight-image-container">
+                                                <!---->
+                                                <a href="products/robomotion-rpa/index.html" class="d-block">
+                                                    <picture class="h-100 w-100">
+                                                        <source media="(min-width: 720px)"
+                                                            srcset="assets/images/as-web-Robomotion_3qE5qtq84c5.jpg?width=850&amp;height=566&amp;aspect_ratio=3:2">
+                                                        <source media="(min-width: 1200px)"
+                                                            srcset="assets/images/as-web-Robomotion_3qE5qtqa88a.jpg?width=530&amp;height=353&amp;aspect_ratio=3:2">
+                                                        <img src="{{ static_asset('assets/frontend/assets/images/530x353.png') }}"
+                                                            alt="Robomotion RPA" class="carousel-cell-image w-100">
+                                                    </picture>
+                                                </a>
+                                            </div>
+                                            <div class="spotlight-offer-detail">
+                                                <div><span class="bg-primary text-white
+                                       rounded d-inline-block spotlight-banner">
+                                                        Limelight
+                                                    </span>
+                                                </div>
+                                                <a href="products/robomotion-rpa/index.html" class="featured-header">
+                                                    Robomotion RPA
+                                                </a>
+                                                <span>
+                                                    <span>
+                                                        <span class="deal-plan-type">Lifetime deal</span>
+                                                        <!---->
+                                                    </span>
+                                                </span>
+                                                <p class="featured-sub-header">
+                                                    Automate repetitive and data-intensive manual tasks with
+                                                    easy-to-use RPA bots.
+                                                </p>
+                                                <div browse="true" class="sumo-taco-rating featured-deal-taco-container"
+                                                    data-v-2c9a2615>
+                                                    <div class="taco-rating" data-v-2c9a2615>
+                                                        <span class="taco-rating-pct" style="width:calc(75% + 32.5px);"
+                                                            data-v-2c9a2615></span>
+                                                        <!---->
+                                                    </div>
+                                                    <span class="taco-rating-text" style="top: 3px;" data-v-2c9a2615><a
+                                                            href="products/robomotion-rpa/index.html#reviews"
+                                                            data-v-2c9a2615>
+                                                            41 Reviews
+                                                        </a></span>
+                                                </div>
+                                                <div class="deal-price w-100 spotlight-carousel-component"
+                                                    data-v-5864787e>
+                                                    <div data-v-5864787e>
+                                                        <p class="d-inline-block mr-1" data-v-5864787e>
+                                                            $79
+                                                        </p>
+                                                        <p class="original d-inline-block" data-v-5864787e>
+                                                            $1,980
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="buy"><a href="products/robomotion-rpa/index.html">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-
-
-
-                                
-                                
+                                <div class="carousel-cell">
+                                    <div class="carousel-cell-inner">
+                                        <div class="featured-offer-container d-flex flex-row">
+                                            <div class="spotlight-image-container">
+                                                <!---->
+                                                <a href="products/orbital/index.html" class="d-block">
+                                                    <picture class="h-100 w-100">
+                                                        <source media="(min-width: 720px)"
+                                                            srcset="assets/images/as-web-Orbital_E76E4N184c5.jpg?width=850&amp;height=566&amp;aspect_ratio=3:2">
+                                                        <source media="(min-width: 1200px)"
+                                                            srcset="assets/images/as-web-Orbital_E76E4N1a88a.jpg?width=530&amp;height=353&amp;aspect_ratio=3:2">
+                                                        <img src="{{ static_asset('assets/frontend/assets/images/530x353.png') }}"
+                                                            alt="Orbital" class="carousel-cell-image w-100">
+                                                    </picture>
+                                                </a>
+                                            </div>
+                                            <div class="spotlight-offer-detail">
+                                                <div><span class="bg-primary text-white
+                                       rounded d-inline-block spotlight-banner">
+                                                        Limelight
+                                                    </span>
+                                                </div>
+                                                <a href="products/orbital/index.html" class="featured-header">
+                                                    Orbital
+                                                </a>
+                                                <span>
+                                                    <span>
+                                                        <span class="deal-plan-type">Lifetime deal</span>
+                                                        <!---->
+                                                    </span>
+                                                </span>
+                                                <p class="featured-sub-header">
+                                                    Collaborate in interactive audio spaces as a team,
+                                                    class, or community.
+                                                </p>
+                                                <div browse="true" class="sumo-taco-rating featured-deal-taco-container"
+                                                    data-v-2c9a2615>
+                                                    <div class="taco-rating" data-v-2c9a2615>
+                                                        <span class="taco-rating-pct" style="width:calc(75% + 32.5px);"
+                                                            data-v-2c9a2615></span>
+                                                        <!---->
+                                                    </div>
+                                                    <span class="taco-rating-text" style="top: 3px;" data-v-2c9a2615><a
+                                                            href="products/orbital/index.html#reviews" data-v-2c9a2615>
+                                                            1 Reviews
+                                                        </a></span>
+                                                </div>
+                                                <div class="deal-price w-100 spotlight-carousel-component"
+                                                    data-v-5864787e>
+                                                    <div data-v-5864787e>
+                                                        <p class="d-inline-block mr-1" data-v-5864787e>
+                                                            $69
+                                                        </p>
+                                                        <p class="original d-inline-block" data-v-5864787e>
+                                                            $1,140
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="buy"><a href="products/orbital/index.html">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="carousel-cell-inner">
+                                        <div class="featured-offer-container d-flex flex-row">
+                                            <div class="spotlight-image-container">
+                                                <!---->
+                                                <a href="products/aiseoai/index.html" class="d-block">
+                                                    <picture class="h-100 w-100">
+                                                        <source media="(min-width: 720px)"
+                                                            srcset="../appsumo2-cdn.appsumo.com/media/selfsubmissions/images/b6d2c678-e177-4cfc-9d8a-a17993de14f784c5.jpg?width=850&amp;height=566&amp;aspect_ratio=3:2">
+                                                        <source media="(min-width: 1200px)"
+                                                            srcset="../appsumo2-cdn.appsumo.com/media/selfsubmissions/images/b6d2c678-e177-4cfc-9d8a-a17993de14f7a88a.jpg?width=530&amp;height=353&amp;aspect_ratio=3:2">
+                                                        <img src="{{ static_asset('assets/frontend/assets/images/530x353.png') }}"
+                                                            alt="AISEO.ai" class="carousel-cell-image w-100">
+                                                    </picture>
+                                                </a>
+                                            </div>
+                                            <div class="spotlight-offer-detail">
+                                                <div><span class="bg-primary text-white
+                                       rounded d-inline-block spotlight-banner">
+                                                        Limelight
+                                                    </span>
+                                                </div>
+                                                <a href="products/aiseoai/index.html" class="featured-header">
+                                                    AISEO.ai
+                                                </a>
+                                                <span>
+                                                    <span>
+                                                        <span class="deal-plan-type">Lifetime deal</span>
+                                                        <!---->
+                                                    </span>
+                                                </span>
+                                                <p class="featured-sub-header">
+                                                    Generating and optimizing blog posts is a time consuming
+                                                    process, and it takes a lot
+                                                    of effort to make it SEO friendly. Let AISEO.ai's AI
+                                                    writing assistant create,
+                                                    optimize and rewrite content/blog posts for you,
+                                                    resulting in 10x more efficiency.
+                                                    AISEO.ai's writing assistant let you generate an SEO .
+                                                </p>
+                                                <div browse="true" class="sumo-taco-rating featured-deal-taco-container"
+                                                    data-v-2c9a2615>
+                                                    <div class="taco-rating" data-v-2c9a2615>
+                                                        <span class="taco-rating-pct"
+                                                            style="width:calc(72.44999999999999% + 26px);"
+                                                            data-v-2c9a2615></span>
+                                                        <!---->
+                                                    </div>
+                                                    <span class="taco-rating-text" style="top: 3px;" data-v-2c9a2615><a
+                                                            href="products/aiseoai/index.html#reviews" data-v-2c9a2615>
+                                                            218 Reviews
+                                                        </a></span>
+                                                </div>
+                                                <div class="deal-price w-100 spotlight-carousel-component"
+                                                    data-v-5864787e>
+                                                    <div data-v-5864787e>
+                                                        <p class="d-inline-block mr-1" data-v-5864787e>
+                                                            $49
+                                                        </p>
+                                                        <p class="original d-inline-block" data-v-5864787e>
+                                                            $300
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="buy"><a href="products/aiseoai/index.html">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="carousel-cell-inner">
+                                        <div class="featured-offer-container d-flex flex-row">
+                                            <div class="spotlight-image-container">
+                                                <!---->
+                                                <a href="products/wideo/index.html" class="d-block">
+                                                    <picture class="h-100 w-100">
+                                                        <source media="(min-width: 720px)"
+                                                            srcset="{{ static_asset('assets/frontend/assets/images/530x353.png') }}?width=850&amp;height=566&amp;aspect_ratio=3:2">
+                                                        <source media="(min-width: 1200px)"
+                                                            srcset="assets/images/as-featured-Wideo-1200x600a88a.png?width=530&amp;height=353&amp;aspect_ratio=3:2">
+                                                        <img src="assets/images/as-featured-Wideo-1200x6006c51.png?width=450&amp;height=300&amp;aspect_ratio=3:2"
+                                                            alt="Wideo" class="carousel-cell-image w-100">
+                                                    </picture>
+                                                </a>
+                                            </div>
+                                            <div class="spotlight-offer-detail">
+                                                <div><span class="bg-primary text-white
+                                       rounded d-inline-block spotlight-banner">
+                                                        Limelight
+                                                    </span>
+                                                </div>
+                                                <a href="products/wideo/index.html" class="featured-header">
+                                                    Wideo
+                                                </a>
+                                                <span>
+                                                    <span>
+                                                        <span class="deal-plan-type">Lifetime deal</span>
+                                                        <!---->
+                                                    </span>
+                                                </span>
+                                                <p class="featured-sub-header">
+                                                    Instantly create animated videos and presentations that
+                                                    wow your audience.
+                                                </p>
+                                                <div browse="true" class="sumo-taco-rating featured-deal-taco-container"
+                                                    data-v-2c9a2615>
+                                                    <div class="taco-rating" data-v-2c9a2615>
+                                                        <span class="taco-rating-pct" style="width:calc(75% + 32.5px);"
+                                                            data-v-2c9a2615></span>
+                                                        <!---->
+                                                    </div>
+                                                    <span class="taco-rating-text" style="top: 3px;" data-v-2c9a2615><a
+                                                            href="products/wideo/index.html#reviews" data-v-2c9a2615>
+                                                            21 Reviews
+                                                        </a></span>
+                                                </div>
+                                                <div class="deal-price w-100 spotlight-carousel-component"
+                                                    data-v-5864787e>
+                                                    <div data-v-5864787e>
+                                                        <p class="d-inline-block mr-1" data-v-5864787e>
+                                                            $59
+                                                        </p>
+                                                        <p class="original d-inline-block" data-v-5864787e>
+                                                            $228
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="buy"><a href="products/wideo/index.html">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
@@ -214,7 +510,7 @@
                         <h3 data-v-256a1bdd>
                             <a href="#" data-v-256a1bdd>
                                 <span data-v-256a1bdd>What's hot</span>
-                                
+                                <!---->
                             </a>
                         </h3>
                         <a href="#" title="Browse this collection" class="more d-inline" data-v-256a1bdd>View all</a>
@@ -1042,14 +1338,516 @@
 
 
             </div>
-      
+            <div data-fetch-key="5" class="smart-collection-section">
+                <div class="spotlight-container with-background"
+                    style="--background-color:#09292b; --viewport-width:1903px;">
+                    <div class="spotlight-background"
+                        style="--background-image:url(https\:\/\/appsumo2-cdn\.appsumo\.com\/media\/smartcollections\/images\/Collections-WEW-2022-wrapper_dB5s4Li\.png); --mobile-background-image:url(https\:\/\/appsumo2-cdn\.appsumo\.com\/media\/smartcollections\/images\/Collections-WEW-2022-mobile-v1_Wszbqi3\.png);">
+                        <div>
+                            <img src="assets/images/562x143.png" alt class="img-fluid">
+                            <div>
+                                <p style="color:#1b1b1b;">Discover game-changing products from women who
+                                    break
+                                    the bias and inspire all of us. Click the logo above to shop majority
+                                    women-owned products in our store.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper spotlight-carousel" data-v-2351f2da style="--viewport-width:1903px;">
+                        <div class="flicking-viewport" data-v-2351f2da
+                            style="touch-action: pan-y; user-select: none; -webkit-user-drag: none;">
+                            <div class="flicking-camera owl-carousel body_sli">
+                                <div class="carousel-cell">
+                                    <div class="carousel-cell-inner">
+                                        <div class="featured-offer-container d-flex flex-row">
+                                            <div class="spotlight-image-container">
+                                                <!---->
+                                                <a href="/products/studiocart/" class="d-block">
+                                                    <picture class="h-100 w-100">
+                                                        <source media="(min-width: 720px)"
+                                                            srcset="https://appsumo2-cdn.appsumo.com/media/deals/images/as-featured-Studiocart-1200x600.png?width=850&amp;height=566&amp;aspect_ratio=3:2">
+                                                        <source media="(min-width: 1200px)"
+                                                            srcset="https://appsumo2-cdn.appsumo.com/media/deals/images/as-featured-Studiocart-1200x600.png?width=530&amp;height=353&amp;aspect_ratio=3:2">
+                                                        <img src="https://appsumo2-cdn.appsumo.com/media/deals/images/as-featured-Studiocart-1200x600.png?width=450&amp;height=300&amp;aspect_ratio=3:2"
+                                                            alt="Studiocart" class="carousel-cell-image w-100">
+                                                    </picture>
+                                                </a>
+                                            </div>
+                                            <div class="spotlight-offer-detail">
+                                                <div><span class="bg-primary text-white
+                                       rounded d-inline-block spotlight-banner">
+                                                        Limelight
+                                                    </span>
+                                                </div>
+                                                <a href="/products/studiocart/" class="featured-header">
+                                                    Studiocart
+                                                </a>
+                                                <span>
+                                                    <span>
+                                                        <span class="deal-plan-type">Lifetime deal</span>
+                                                        <!---->
+                                                    </span>
+                                                </span>
+                                                <p class="featured-sub-header">
+                                                    Build high-converting checkout pages and sales funnels
+                                                    on your own
+                                                    website.
+                                                </p>
+                                                <div data-v-2c9a2615 browse="true"
+                                                    class="sumo-taco-rating featured-deal-taco-container">
+                                                    <div data-v-2c9a2615 class="taco-rating">
+                                                        <span data-v-2c9a2615 class="taco-rating-pct"
+                                                            style="width: calc(74.25% + 26px);"></span>
+                                                        <!---->
+                                                    </div>
+                                                    <span data-v-2c9a2615 class="taco-rating-text" style="top: 3px;"><a
+                                                            data-v-2c9a2615 href="/products/studiocart/#reviews">
+                                                            73 Reviews
+                                                        </a></span>
+                                                </div>
+                                                <div data-v-5864787e
+                                                    class="deal-price w-100 spotlight-carousel-component">
+                                                    <div data-v-5864787e>
+                                                        <p data-v-5864787e class="d-inline-block mr-1">
+                                                            $89
+                                                        </p>
+                                                        <p data-v-5864787e class="original d-inline-block">
+                                                            $599
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="buy"><a href="/products/studiocart/">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="carousel-cell-inner">
+                                        <div class="featured-offer-container d-flex flex-row">
+                                            <div class="spotlight-image-container">
+                                                <!---->
+                                                <a href="/products/ideta/" class="d-block">
+                                                    <picture class="h-100 w-100">
+                                                        <img src="{{ static_asset('assets/frontend/assets/images/530x353.png') }}"
+                                                            alt="Ideta" class="carousel-cell-image w-100">
+                                                    </picture>
+                                                </a>
+                                            </div>
+                                            <div class="spotlight-offer-detail">
+                                                <div><span class="bg-primary text-white
+                                       rounded d-inline-block spotlight-banner">
+                                                        Limelight
+                                                    </span>
+                                                </div>
+                                                <a href="/products/ideta/" class="featured-header">
+                                                    Ideta
+                                                </a>
+                                                <span>
+                                                    <span>
+                                                        <span class="deal-plan-type">Lifetime deal</span>
+                                                        <!---->
+                                                    </span>
+                                                </span>
+                                                <p class="featured-sub-header">
+                                                    Engage more leads by recruiting a smart chatbot that
+                                                    boosts your
+                                                    business.
+                                                </p>
+                                                <div data-v-2c9a2615 browse="true"
+                                                    class="sumo-taco-rating featured-deal-taco-container">
+                                                    <div data-v-2c9a2615 class="taco-rating">
+                                                        <span data-v-2c9a2615 class="taco-rating-pct"
+                                                            style="width: calc(75% + 32.5px);"></span>
+                                                        <!---->
+                                                    </div>
+                                                    <span data-v-2c9a2615 class="taco-rating-text" style="top: 3px;"><a
+                                                            data-v-2c9a2615 href="/products/ideta/#reviews">
+                                                            12 Reviews
+                                                        </a></span>
+                                                </div>
+                                                <div data-v-5864787e
+                                                    class="deal-price w-100 spotlight-carousel-component">
+                                                    <div data-v-5864787e>
+                                                        <p data-v-5864787e class="d-inline-block mr-1">
+                                                            $69
+                                                        </p>
+                                                        <p data-v-5864787e class="original d-inline-block">
+                                                            $348
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="buy"><a href="/products/ideta/">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="carousel-cell-inner">
+                                        <div class="featured-offer-container d-flex flex-row">
+                                            <div class="spotlight-image-container">
+                                                <!---->
+                                                <a href="/products/marble/" class="d-block">
+                                                    <picture class="h-100 w-100">
+                                                        <img src="{{ static_asset('assets/frontend/assets/images/530x353.png') }}"
+                                                            alt="Marble" class="carousel-cell-image w-100">
+                                                    </picture>
+                                                </a>
+                                            </div>
+                                            <div class="spotlight-offer-detail">
+                                                <div><span class="bg-primary text-white
+                                       rounded d-inline-block spotlight-banner">
+                                                        Limelight
+                                                    </span>
+                                                </div>
+                                                <a href="/products/marble/" class="featured-header">
+                                                    Marble
+                                                </a>
+                                                <span>
+                                                    <span>
+                                                        <span class="deal-plan-type">Lifetime deal</span>
+                                                        <!---->
+                                                    </span>
+                                                </span>
+                                                <p class="featured-sub-header">
+                                                    Build your digital academy and first course in just 10
+                                                    minutes.
+                                                </p>
+                                                <div data-v-2c9a2615 browse="true"
+                                                    class="sumo-taco-rating featured-deal-taco-container">
+                                                    <div data-v-2c9a2615 class="taco-rating">
+                                                        <span data-v-2c9a2615 class="taco-rating-pct"
+                                                            style="width: calc(72.75% + 26px);"></span>
+                                                        <!---->
+                                                    </div>
+                                                    <span data-v-2c9a2615 class="taco-rating-text" style="top: 3px;"><a
+                                                            data-v-2c9a2615 href="/products/marble/#reviews">
+                                                            61 Reviews
+                                                        </a></span>
+                                                </div>
+                                                <div data-v-5864787e
+                                                    class="deal-price w-100 spotlight-carousel-component">
+                                                    <div data-v-5864787e>
+                                                        <p data-v-5864787e class="d-inline-block mr-1">
+                                                            $69
+                                                        </p>
+                                                        <p data-v-5864787e class="original d-inline-block">
+                                                            $1,590
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="buy"><a href="/products/marble/">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="carousel-cell-inner">
+                                        <div class="featured-offer-container d-flex flex-row">
+                                            <div class="spotlight-image-container">
+                                                <!---->
+                                                <a href="/products/turning-email-into-1mil-how-grow-from-0-to-1mil-15mil-followers/"
+                                                    class="d-block">
+                                                    <picture class="h-100 w-100">
+                                                        <img src="{{ static_asset('assets/frontend/assets/images/530x353.png') }}"
+                                                            alt="Turning Email Into $1Mil: How to Grow From 0 To $1Mil &amp; 1.5Mil Followers"
+                                                            class="carousel-cell-image w-100">
+                                                    </picture>
+                                                </a>
+                                            </div>
+                                            <div class="spotlight-offer-detail">
+                                                <div><span class="bg-primary text-white
+                                       rounded d-inline-block spotlight-banner">
+                                                        Limelight
+                                                    </span>
+                                                </div>
+                                                <a href="/products/turning-email-into-1mil-how-grow-from-0-to-1mil-15mil-followers/"
+                                                    class="featured-header">
+                                                    Turning Email Into $1Mil: How to Grow From 0 To $1Mil
+                                                    &amp; 1.5Mil
+                                                    Followers
+                                                </a>
+                                                <span>
+                                                    <span>
+                                                        <span class="deal-plan-type">Lifetime deal</span>
+                                                        <!---->
+                                                    </span>
+                                                </span>
+                                                <p class="featured-sub-header">
+                                                    How to Grow From 0 To $1Mil &amp; 1.5Mil Followers.
+                                                </p>
+                                                <div data-v-2c9a2615 browse="true"
+                                                    class="sumo-taco-rating featured-deal-taco-container">
+                                                    <div data-v-2c9a2615 class="taco-rating">
+                                                        <span data-v-2c9a2615 class="taco-rating-pct"
+                                                            style="width: calc(72.45% + 26px);"></span>
+                                                        <!---->
+                                                    </div>
+                                                    <span data-v-2c9a2615 class="taco-rating-text" style="top: 3px;"><a
+                                                            data-v-2c9a2615
+                                                            href="/products/turning-email-into-1mil-how-grow-from-0-to-1mil-15mil-followers/#reviews">
+                                                            41 Reviews
+                                                        </a></span>
+                                                </div>
+                                                <div data-v-5864787e
+                                                    class="deal-price w-100 spotlight-carousel-component">
+                                                    <div data-v-5864787e>
+                                                        <p data-v-5864787e class="d-inline-block mr-1">
+                                                            $239
+                                                        </p>
+                                                        <p data-v-5864787e class="original d-inline-block">
+                                                            $597
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="buy"><a
+                                                        href="/products/turning-email-into-1mil-how-grow-from-0-to-1mil-15mil-followers/">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="carousel-cell-inner">
+                                        <div class="featured-offer-container d-flex flex-row">
+                                            <div class="spotlight-image-container">
+                                                <!---->
+                                                <a href="/products/zeroin/" class="d-block">
+                                                    <picture class="h-100 w-100">
+                                                        <source media="(min-width: 720px)"
+                                                            srcset="https://appsumo2-cdn.appsumo.com/media/deals/images/as-featured-ZeroIn-1200x600.jpg?width=850&amp;height=566&amp;aspect_ratio=3:2">
+                                                        <source media="(min-width: 1200px)"
+                                                            srcset="https://appsumo2-cdn.appsumo.com/media/deals/images/as-featured-ZeroIn-1200x600.jpg?width=530&amp;height=353&amp;aspect_ratio=3:2">
+                                                        <img src="https://appsumo2-cdn.appsumo.com/media/deals/images/as-featured-ZeroIn-1200x600.jpg?width=450&amp;height=300&amp;aspect_ratio=3:2"
+                                                            alt="ZeroIn" class="carousel-cell-image w-100">
+                                                    </picture>
+                                                </a>
+                                            </div>
+                                            <div class="spotlight-offer-detail">
+                                                <div><span class="bg-primary text-white
+                                       rounded d-inline-block spotlight-banner">
+                                                        Limelight
+                                                    </span>
+                                                </div>
+                                                <a href="/products/zeroin/" class="featured-header">
+                                                    ZeroIn
+                                                </a>
+                                                <span>
+                                                    <span>
+                                                        <span class="deal-plan-type">Lifetime deal</span>
+                                                        <!---->
+                                                    </span>
+                                                </span>
+                                                <p class="featured-sub-header">
+                                                    Precise LinkedIn prospecting for collecting business
+                                                    emails and
+                                                    account information.
+                                                </p>
+                                                <div data-v-2c9a2615 browse="true"
+                                                    class="sumo-taco-rating featured-deal-taco-container">
+                                                    <div data-v-2c9a2615 class="taco-rating">
+                                                        <span data-v-2c9a2615 class="taco-rating-pct"
+                                                            style="width: calc(70.65% + 26px);"></span>
+                                                        <!---->
+                                                    </div>
+                                                    <span data-v-2c9a2615 class="taco-rating-text" style="top: 3px;"><a
+                                                            data-v-2c9a2615 href="/products/zeroin/#reviews">
+                                                            92 Reviews
+                                                        </a></span>
+                                                </div>
+                                                <div data-v-5864787e
+                                                    class="deal-price w-100 spotlight-carousel-component">
+                                                    <div data-v-5864787e>
+                                                        <p data-v-5864787e class="d-inline-block mr-1">
+                                                            $49
+                                                        </p>
+                                                        <p data-v-5864787e class="original d-inline-block">
+                                                            $78
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="buy"><a href="/products/zeroin/">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="carousel-cell-inner">
+                                        <div class="featured-offer-container d-flex flex-row">
+                                            <div class="spotlight-image-container">
+                                                <!---->
+                                                <a href="/products/uilicious/" class="d-block">
+                                                    <picture class="h-100 w-100">
+                                                        <source media="(min-width: 720px)"
+                                                            srcset="https://appsumo2-cdn.appsumo.com/media/deals/images/as-web-UI-licious_TRLZeBh.jpg?width=850&amp;height=566&amp;aspect_ratio=3:2">
+                                                        <source media="(min-width: 1200px)"
+                                                            srcset="https://appsumo2-cdn.appsumo.com/media/deals/images/as-web-UI-licious_TRLZeBh.jpg?width=530&amp;height=353&amp;aspect_ratio=3:2">
+                                                        <img src="https://appsumo2-cdn.appsumo.com/media/deals/images/as-web-UI-licious_TRLZeBh.jpg?width=450&amp;height=300&amp;aspect_ratio=3:2"
+                                                            alt="UIlicious" class="carousel-cell-image w-100">
+                                                    </picture>
+                                                </a>
+                                            </div>
+                                            <div class="spotlight-offer-detail">
+                                                <div><span class="bg-primary text-white
+                                       rounded d-inline-block spotlight-banner">
+                                                        Limelight
+                                                    </span>
+                                                </div>
+                                                <a href="/products/uilicious/" class="featured-header">
+                                                    UIlicious
+                                                </a>
+                                                <span>
+                                                    <span>
+                                                        <span class="deal-plan-type">Lifetime deal</span>
+                                                        <!---->
+                                                    </span>
+                                                </span>
+                                                <p class="featured-sub-header">
+                                                    Automate your web testing process with a low-code,
+                                                    intuitive
+                                                    platform.
+                                                </p>
+                                                <div data-v-2c9a2615 browse="true"
+                                                    class="sumo-taco-rating featured-deal-taco-container">
+                                                    <div data-v-2c9a2615 class="taco-rating">
+                                                        <span data-v-2c9a2615 class="taco-rating-pct"
+                                                            style="width: calc(75% + 32.5px);"></span>
+                                                        <!---->
+                                                    </div>
+                                                    <span data-v-2c9a2615 class="taco-rating-text" style="top: 3px;"><a
+                                                            data-v-2c9a2615 href="/products/uilicious/#reviews">
+                                                            12 Reviews
+                                                        </a></span>
+                                                </div>
+                                                <div data-v-5864787e
+                                                    class="deal-price w-100 spotlight-carousel-component">
+                                                    <div data-v-5864787e>
+                                                        <p data-v-5864787e class="d-inline-block mr-1">
+                                                            $59
+                                                        </p>
+                                                        <p data-v-5864787e class="original d-inline-block">
+                                                            $1,100
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="buy"><a href="/products/uilicious/">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="carousel-cell-inner">
+                                        <div class="featured-offer-container d-flex flex-row">
+                                            <div class="spotlight-image-container">
+                                                <!---->
+                                                <a href="/products/orbital/" class="d-block">
+                                                    <picture class="h-100 w-100">
+                                                        <source media="(min-width: 720px)"
+                                                            srcset="https://appsumo2-cdn.appsumo.com/media/deals/images/as-web-Orbital_E76E4N1.jpg?width=850&amp;height=566&amp;aspect_ratio=3:2">
+                                                        <source media="(min-width: 1200px)"
+                                                            srcset="https://appsumo2-cdn.appsumo.com/media/deals/images/as-web-Orbital_E76E4N1.jpg?width=530&amp;height=353&amp;aspect_ratio=3:2">
+                                                        <img src="https://appsumo2-cdn.appsumo.com/media/deals/images/as-web-Orbital_E76E4N1.jpg?width=450&amp;height=300&amp;aspect_ratio=3:2"
+                                                            alt="Orbital" class="carousel-cell-image w-100">
+                                                    </picture>
+                                                </a>
+                                            </div>
+                                            <div class="spotlight-offer-detail">
+                                                <div><span class="bg-primary text-white
+                                       rounded d-inline-block spotlight-banner">
+                                                        Limelight
+                                                    </span>
+                                                </div>
+                                                <a href="/products/orbital/" class="featured-header">
+                                                    Orbital
+                                                </a>
+                                                <span>
+                                                    <span>
+                                                        <span class="deal-plan-type">Lifetime deal</span>
+                                                        <!---->
+                                                    </span>
+                                                </span>
+                                                <p class="featured-sub-header">
+                                                    Collaborate in interactive audio spaces as a team,
+                                                    class, or
+                                                    community.
+                                                </p>
+                                                <div data-v-2c9a2615 browse="true"
+                                                    class="sumo-taco-rating featured-deal-taco-container">
+                                                    <div data-v-2c9a2615 class="taco-rating">
+                                                        <span data-v-2c9a2615 class="taco-rating-pct"
+                                                            style="width: calc(64.95% + 26px);"></span>
+                                                        <!---->
+                                                    </div>
+                                                    <span data-v-2c9a2615 class="taco-rating-text" style="top: 3px;"><a
+                                                            data-v-2c9a2615 href="/products/orbital/#reviews">
+                                                            6 Reviews
+                                                        </a></span>
+                                                </div>
+                                                <div data-v-5864787e
+                                                    class="deal-price w-100 spotlight-carousel-component">
+                                                    <div data-v-5864787e>
+                                                        <p data-v-5864787e class="d-inline-block mr-1">
+                                                            $69
+                                                        </p>
+                                                        <p data-v-5864787e class="original d-inline-block">
+                                                            $1,140
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="buy"><a href="/products/orbital/">
+                                                        Learn more
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- <span
+                            class="flicking-arrow-prev flicking-button is-outside is-circle flicking-arrow-prev-69"
+                            data-v-2351f2da></span>
+                        <span class="flicking-arrow-next flicking-button is-outside is-circle flicking-arrow-next-69"
+                            data-v-2351f2da></span> --}}
 
-
-
-
-
-
-            
+                        {{-- <div class="flicking-pagination flicking-pagination-69 flicking-pagination-bullets"
+                            data-v-2351f2da>
+                            <span class="flicking-pagination-bullet"></span>
+                            <span class="flicking-pagination-bullet flicking-pagination-bullet-active"></span>
+                            <span class="flicking-pagination-bullet"></span>
+                            <span class="flicking-pagination-bullet"></span>
+                            <span class="flicking-pagination-bullet"></span>
+                            <span class="flicking-pagination-bullet"></span>
+                            <span class="flicking-pagination-bullet"></span>
+                        </div> --}}
+                    </div>
+                </div>
+                <!---->
+                <!---->
+                <!---->
+                <div>
+                    <!---->
+                    <!---->
+                    <!---->
+                </div>
+            </div>
             <div data-fetch-key="6" class="smart-collection-section" data-v-3948d8ad>
                 <!---->
                 <div class="mb-5 product-carousel" data-v-256a1bdd>

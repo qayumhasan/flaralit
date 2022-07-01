@@ -28,11 +28,13 @@
         }
 
         .spotlight-container {
-            background-color: #293e40;
+            /* background-color: #293e40; */
+            background-color: #e7eaf3;
         }
 
         .spotlight-carousel {
-            background-color: #293e40;
+            /* background-color: #293e40; */
+            background-color: #e7eaf3;
         }
 
         .green {
@@ -91,6 +93,15 @@
 
         </div>
     </div>
+   
+        <script src="https://scripts.sirfiliate.com/sirfiliate.js" async></script>
+<script type="text/javascript">
+    (function(s,f){s.SirFiliateTracking=f;s[f]=s[f]||function(){ (s[f].q=s[f].q||[]).push(arguments)}})(window,'sf');
+
+    sf('init', 'yx364YiM9yeJtrSSTm1JnmPM4sFsMVEIryeQ3ZQeC2EHn85pqpsofK3fBAJbj');
+    sf('detect');
+</script>
+    
     @include('frontend.layouts._script')
     @stack('script')
 </body>

@@ -72,4 +72,13 @@ class User extends Authenticatable
     {
         return $this->hasOne(MembershipPlan::class,'id','membership_plan_id');
     }
+
+
+    /**
+     * Get the orders for the users.
+     */
+    public function orders()
+    {
+        return $this->hasMany(Order::class,'user_id');
+    }
 }

@@ -20,11 +20,14 @@ header .navbar-brand {
 }
 
 .spotlight-container {
-    background-color: #293e40;
+    /* background-color: #293e40; */
+    background-color: #e7eaf3;
 }
 
 .spotlight-carousel {
-    background-color: #293e40;
+    /* background-color: #293e40; */
+    background-color: #e7eaf3;
+
 }
 
 .green {

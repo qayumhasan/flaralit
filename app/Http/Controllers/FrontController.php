@@ -23,6 +23,7 @@ class FrontController extends Controller
 {
     public function home()
     {
+
         $data['products'] = Product::where('status', Product::STATUS_ACCEPTED)->latest()->get();
 
         return view('frontend.index', $data);
@@ -124,7 +125,8 @@ class FrontController extends Controller
     }
     public function accoutn_products()
     {
-        return view('frontend.account-products');
+        $orders = Auth::user()->orders;
+        return view('frontend.account-products',compact('orders'));
     }
 
     public function wishlist_product()
@@ -309,7 +311,7 @@ class FrontController extends Controller
         $cart = session()->get('cart');
         try {
             $cart = session()->get('cart');
-            if($cart[$request->product_id]['membershipItem']){
+            if(isset($cart[$request->product_id]['membershipItem'])){
                 session()->forget('membership_cart');    
             }
             

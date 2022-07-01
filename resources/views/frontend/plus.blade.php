@@ -36,7 +36,7 @@
                     <p data-w-id="f46832f4-d05a-357b-2de3-58fec5d494d0" class="paragraph-26">Get
                         10% off every tool you buy. Enjoy member-only perks that will help your business scale
                         faster.</p><a data-w-id="f46832f4-d05a-357b-2de3-58fec5d494d2"
-                        href="products/plus-2019/buy/index.html" class="join-now w-button">Join now</a>
+                        href="{{ route('membership.add_to_cart') }}" class="join-now w-button">Join now</a>
                     <div data-w-id="f46832f4-d05a-357b-2de3-58fec5d494d4" class="btn-text-under-plus">
                         Just $99/year - Cancel anytime</div>
                     <div data-w-id="f46832f4-d05a-357b-2de3-58fec5d494d6" class="div-block-44">
@@ -261,7 +261,7 @@
                 <p class="paragraph-26">Get the foundational tools to start and scale a seven figure business with
                     our  Grandfatheredly  Originals products. You&#x27;ll have full access to KingSumo, plus Tier 1 access to
                     SendFox, EmailBadge, ShortySMS and SleekBio for as long as you&#x27;re a member.</p><a
-                    href="products/plus-2019/buy/index.html" class="join-now w-button">Join now</a>
+                    href="{{ route('membership.add_to_cart') }}" class="join-now w-button">Join now</a>
                 <div class="btn-text-under-plus">Just $99/year - Cancel anytime</div>
             </div>
         </div>
@@ -382,7 +382,7 @@
                 <h2 class="footer-headline"> Grandfatheredly  Plus members <br />‍<span class="text-span-22">save $350+/year
                         on essential tools*</span></h2>
                 <p class="footer-body">Time to invest in your business? Join  Grandfatheredly  Plus.</p><a
-                    href="products/plus-2019/buy/index.html" class="join-now w-button">Join now</a>
+                    href="{{ route('membership.add_to_cart') }}" class="join-now w-button">Join now</a>
                 <div class="btn-text-under-plus-center">*On average, over 5,000 plus members saved at least $350
                     last year<strong>.</strong><br /></div>
             </div>

@@ -22,41 +22,54 @@ use App\Models\Order;
 
   <section data-v-71dfcb0f="" class="account-overview-content text-center p-4">
     <div data-v-71dfcb0f="" class="row">
+      
       <div data-v-71dfcb0f="" class="sumo-new-grid col-lg-4 col-md-6 d-flex">
-        <div data-v-71dfcb0f="" class="card"><img data-v-71dfcb0f=""
+        <div data-v-71dfcb0f="" class="card">
+          <a href="{{route('account-products')}}" style="text-decoration:none;">
+          <img data-v-71dfcb0f=""
             src="https://appsumo2nuxt-cdn.appsumo.com/cfa57d2594a952d8d37006a23c9be7b0.svg" width="auto" height="50"
             alt="Products" class="my-10">
           <h2 data-v-71dfcb0f="">Products</h2>
           <p data-v-71dfcb0f="" class="light">
             Track, redeem, or refund products
           </p>
-        </div> <a data-v-71dfcb0f="" href="/account/products/" class="sumo-card-link"></a>
+          </a>
+
+        </div> 
       </div>
 
       <div data-v-71dfcb0f="" class="sumo-new-grid col-lg-4 col-md-6 d-flex">
-        <div data-v-71dfcb0f="" class="card"><img data-v-71dfcb0f=""
+        <div data-v-71dfcb0f="" class="card">
+          <a href="{{route('account-profile')}}" style="text-decoration:none;">
+          <img data-v-71dfcb0f=""
             src="https://appsumo2nuxt-cdn.appsumo.com/8122f8325bc890147bdad610d4a0d499.svg" width="auto" height="50"
             alt="Profile" class="my-10">
           <h2 data-v-71dfcb0f="">Profile</h2>
           <p data-v-71dfcb0f="" class="light">
             Edit username, password, and profile picture
           </p>
-        </div> <a data-v-71dfcb0f="" href="/account/profile/" class="sumo-card-link"></a>
+          </a>
+        </div>
       </div>
 
       <div data-v-71dfcb0f="" class="sumo-new-grid col-lg-4 col-md-6 d-flex">
-        <div data-v-71dfcb0f="" class="card"><img data-v-71dfcb0f=""
+        <div data-v-71dfcb0f="" class="card">
+          <a href="{{route('account-email')}}" style="text-decoration:none;">
+          <img data-v-71dfcb0f=""
             src="https://appsumo2nuxt-cdn.appsumo.com/2c9fcad78045ab9eb9d4a918dae58d81.svg" width="auto" height="50"
             alt="Email settings" class="my-10">
           <h2 data-v-71dfcb0f="">Email settings</h2>
           <p data-v-71dfcb0f="" class="light">
             Add email, verify existing email, resend verification
           </p>
-        </div> <a data-v-71dfcb0f="" href="/account/email/" class="sumo-card-link"></a>
+          </a>
+        </div>
       </div>
 
       <div data-v-71dfcb0f="" class="sumo-new-grid col-lg-4 col-md-6 d-flex">
-        <div data-v-71dfcb0f="" class="card"><img data-v-71dfcb0f=""
+        <div data-v-71dfcb0f="" class="card">
+          <a href="{{route('account-credits')}}" style="text-decoration:none;">
+          <img data-v-71dfcb0f=""
             src="https://appsumo2nuxt-cdn.appsumo.com/65d3b74837029151084d7b13dfba2108.svg" width="auto" height="50"
             alt="Rewards" class="my-10">
           <h2 data-v-71dfcb0f="">Rewards</h2>
@@ -70,10 +83,12 @@ use App\Models\Order;
             <!---->
             <!---->
           </p>
+          </a>
         </div> <a data-v-71dfcb0f="" href="/account/credits/" class="sumo-card-link"></a>
       </div>
 
       <div data-v-71dfcb0f="" class="sumo-new-grid col-lg-4 col-md-6 d-flex">
+        <a href="{{route('account-credits')}}" style="text-decoration:none;">
         <div data-v-71dfcb0f="" class="card"><img data-v-71dfcb0f=""
             src="https://appsumo2nuxt-cdn.appsumo.com/65d3b74837029151084d7b13dfba2108.svg" width="auto" height="50"
             alt="Payment" class="my-10">
@@ -81,7 +96,9 @@ use App\Models\Order;
           <p data-v-71dfcb0f="" class="light">
             Manage your credit cards
           </p>
-        </div> <a data-v-71dfcb0f="" href="/account/cards/" class="sumo-card-link"></a>
+        
+        </a>
+        </div>
       </div>
 
       <div data-v-71dfcb0f="" class="sumo-new-grid col-lg-4 col-md-6 d-flex">

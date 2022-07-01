@@ -3,6 +3,14 @@
 
 
 
+<link href="{{ static_asset('assets/frontend/slider/style.css') }}"
+      rel="stylesheet" type="text/css" />
+
+      
+<link href="{{ static_asset('assets/frontend/slider/bootstrap.min.css') }}"
+rel="stylesheet" type="text/css" />
+
+
 <link href="{{ static_asset('assets/frontend/assets/615b54e9eebdbb6f52457d5b/css/appsumo-partners-2f565175f212c5732a1e6e.bc3fc6b41.css') }}"
       rel="stylesheet" type="text/css" />
 

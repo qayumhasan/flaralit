@@ -44,6 +44,8 @@ class PaymentController extends Controller
 
         if ($data->status == 'succeeded') {
 
+
+            
             // clear cart 
 
             // store data to transaction 
@@ -53,6 +55,7 @@ class PaymentController extends Controller
             $transection->payment_type = 'strip';
             $transection->amount = $data->amount / 100;
             $transection->save();
+           
 
             $unique_id = Str::random(20);
 
@@ -64,6 +67,7 @@ class PaymentController extends Controller
                 $order->product_id              = $single['product_id'];
                 $order->product_name            = $single['name'];
                 $order->quantity                = $single['quantity'];
+                $order->user_id                   = auth()->user()->user_id;
                 $order->price           = $single['price'];
                 $order->photo           = $single['photo'];
                 $order->is_free         = $product->is_free ?? 'null';
@@ -77,6 +81,9 @@ class PaymentController extends Controller
             }
 
             $request->session()->forget('cart');
+            if($request->session()->has('membership_cart')){
+                $request->session()->forget('membership_cart');
+            }
             $success = 'Payment Paid Successfully. <br> Your Transaction Token is: ' . $transection->token;
             return view('frontend.success', compact('success'));
         } else {
